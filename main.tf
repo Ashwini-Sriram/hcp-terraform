@@ -5,7 +5,7 @@ resource "aws_vpc" "main" {
   enable_dns_support   = true
 
   tags = {
-    Name = "main-vpc"
+    Name        = "main-vpc"
     Environment = "dev"
   }
 }
@@ -16,6 +16,7 @@ resource "aws_subnet" "private" {
   availability_zone = var.private_subnet_az
 
   tags = {
-    Name = "main-subnet"
+    Name        = "main-subnet"
+    Environment = "dev"
   }
 }
